@@ -108,7 +108,7 @@ subroutine stochastics_init(dt, grid, GV, US, CS, param_file, diag, Time)
   integer :: nyT, nyB          ! number of y-points including halo
   integer :: default_answer_date ! The default setting for the various ANSWER_DATE flags.
   integer :: i, j, k           ! loop indices
-  real    :: tmp(grid%isdB:grid%iedB,grid%jsdB:grid%jedB) ! Used to construct tapers and weights
+  real    :: tmp(grid%isdB:grid%iedB,grid%jsdB:grid%jedB) ! Used to construct tapers [nondim]
   integer :: taper_width       ! Width (in cells) of the taper that brings the stochastic velocity
                                ! increments to 0 at the boundary.
   real    :: sum_area_wts      ! A rotationally symmetric sum of the surrounding area weights
